@@ -17,7 +17,9 @@ As yet there are no useful bits and pieces for creating test files (look at the 
 Dependencies
 ------------
 
-Ruby 1.9. That's it. It'll probably work on Ruby 1.8 if you use 1.8 lambda syntax but I haven't tried it and you shouldn't be using 1.8 anymore anyway ;-)
+- Ruby 1.9
+- minitest/spec (part of MRI 1.9 stdlib)
+- Unix/Unix-like/POSIX system
 
 Example
 -------
@@ -38,3 +40,10 @@ Example
     # These two tests will deliberately fail
     +-> { raise }
     --> { true }
+    
+Other Features
+--------------
+
+By default, output is written to STDOUT (as well as returned by the test expressions themselves). You can override where test output goes like so:
+
+    TestRocket.out = File.new('/dev/null', 'w')
