@@ -12,6 +12,8 @@ To install:
 
     gem install testrocket
     
+As yet there are no useful bits and pieces for creating test files (look at the example, it's easy!) or Rake tasks. But it's all crazy simple. A few things may be added later on.
+    
 Dependencies
 ------------
 
