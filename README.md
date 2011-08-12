@@ -52,4 +52,5 @@ Authors
 -------
 
 Initial concept and maintenance by Peter Cooper
+
 Extra concepts and code by Christoph Grabo
