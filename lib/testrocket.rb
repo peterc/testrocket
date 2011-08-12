@@ -7,9 +7,11 @@ module TestRocket
 
   def +@; r = _test :_pass, :_fail; (TestRocket.out || $>).puts r; r end
   def -@; r = _test :_fail, :_pass; (TestRocket.out || $>).puts r; r end
-
+  def ~@; r = _pend;                (TestRocket.out || $>).puts r; r end
+  
   def _pass; '  OK'; end
   def _fail; "FAIL @ #{source_location.join(':')}"; end
+  def _pend; "PENDING '#{call.to_s}' @ #{source_location.join(':')}"; end
 end
 
 Proc.send :include, TestRocket

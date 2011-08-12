@@ -20,4 +20,8 @@ describe TestRocket do
   it "should fail a simple correct assertion assumed to fail" do
     (-->{ 2 + 2 == 4 }).must_match(/FAIL/)
   end
+  
+  it "should give a pending notice" do
+    (~->{ "a pending test" }).must_match(/PENDING/)
+  end
 end
