@@ -47,3 +47,9 @@ Other Features
 By default, output is written to STDOUT (as well as returned by the test expressions themselves). You can override where test output goes like so:
 
     TestRocket.out = File.new('/dev/null', 'w')
+
+Authors
+-------
+
+Initial concept and maintenance by Peter Cooper
+Extra concepts and code by Christoph Grabo
