@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.name        = "testrocket"
   s.version     = Testrocket::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Peter Cooper"]
-  s.email       = ["git@peterc.org"]
+  s.authors     = ["Peter Cooper","Christoph Grabo"]
+  s.email       = ["git@peterc.org","chris@dinarrr.com"]
   s.homepage    = "http://github.com/peterc/testrocket"
   s.summary     = %q{A super lightweight testing library for Ruby}
   s.description = %q{A super lightweight testing library for Ruby}
