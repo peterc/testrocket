@@ -23,5 +23,6 @@ describe TestRocket do
   
   it "should give a pending notice" do
     (~->{ "a pending test" }).must_match(/PENDING/)
+    (~->{ "a pending test" }).must_match(/a pending test/)
   end
 end
