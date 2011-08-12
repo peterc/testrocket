@@ -40,6 +40,9 @@ Example
     # These two tests will deliberately fail
     +-> { raise }
     --> { true }
+
+    # A 'pending' test
+    ~-> { "this is a pending test" }
     
 Other Features
 --------------
