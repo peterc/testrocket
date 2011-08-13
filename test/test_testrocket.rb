@@ -25,4 +25,9 @@ describe TestRocket do
     (~->{ "a pending test" }).must_match(/PENDING/)
     (~->{ "a pending test" }).must_match(/a pending test/)
   end
+  
+  it "should fire a description rocket" do
+    (!->{ "a description" }).must_match(/FIRE/)
+    (!->{ "a description" }).must_match(/a description/)
+  end
 end
