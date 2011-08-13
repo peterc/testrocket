@@ -43,9 +43,48 @@ Example
 
     # A 'pending' test
     ~-> { "this is a pending test" }
-    
+
     # A description
     !-> { "use this for descriptive output and to separate your test parts" }
+    
+Launcher Extension
+------------------
+
+    require 'testrocket'
+    require 'testrocket/launcher' # <-- has to be added manually!
+    
+    launcher "my bigger test suite" do
+      fire "first test part" do
+        +-> { true }
+        --> { false }
+      end
+      fire "second test part" do
+        +-> { true }
+        --> { false }
+      end
+    end
+    
+OUTPUT will be:
+    
+    LAUNCHING 'my bigger test suite'
+      FIRE 'first test part'!
+        OK
+        OK
+      /FIRED
+      FIRE 'second test part'!
+        OK
+        OK
+      /FIRED
+    HIT 4 of 4 TARGET(S) AND MISSED 0, LOST 0 ROCKET(S)
+     => "HIT 4 of 4 TARGET(S) AND MISSED 0, LOST 0 ROCKET(S)" 
+
+_launcher_ = something like "describe" in other test suites
+
+The _launcher_ also collects test counts, the positive/negative hits and "lost rockets" (= pending).
+
+_fire_ = something like "it" in other test suites
+
+The _fire_ blocks utilize the _description rocket_, so you don't have to do it in an extra step, it also adds a closing output line for each fire-block.
     
 Other Features
 --------------
