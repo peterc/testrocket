@@ -44,6 +44,9 @@ Example
     # A 'pending' test
     ~-> { "this is a pending test" }
     
+    # A description
+    !-> { "use this for descriptive output and to separate your test parts" }
+    
 Other Features
 --------------
 
