@@ -1,5 +1,5 @@
 module TestRocket
-  module Out; attr_accessor :out; end; extend Out
+  extend Module.new { attr_accessor :out }
   
   def _test(a, b)
     send((call rescue()) ? a : b)
