@@ -1,0 +1,7 @@
+rvm:
+  - 1.9.2
+gemfile: gemfiles/Gemfile.travis
+notifications:
+  recipients:
+    - chris@dinarrr.com
+
