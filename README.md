@@ -54,6 +54,8 @@ By default, output is written to STDOUT (as well as returned by the test express
 
     TestRocket.out = File.new('/dev/null', 'w')
 
+TestRocket.out also supports Logger instances.
+
 Authors
 -------
 
