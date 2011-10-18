@@ -4,7 +4,7 @@
     | |_|  __|__ \ |_| | | (_) | (__|   <|  __/ |_ 
      \__|\___|___/\__|_|  \___/ \___|_|\_\\___|\__|
                                                    
-Testrocket is a super simple (as simple as it gets really) testing library for Ruby.
+Testrocket is a super simple (as simple as it gets really) testing library for Ruby 1.9.
 
 It was initially developed for [this CodeBrawl competition](http://codebrawl.com/articles/contest-rundown-ruby-testing-libraries) and it won! People then asked me to release it 'for real' so here we are.
 
@@ -19,7 +19,7 @@ Dependencies
 
 - Ruby 1.9
 - minitest/spec (part of MRI 1.9 stdlib)
-- Unix/Unix-like/POSIX system
+- Unix/Unix-like/POSIX system (e.g. OS X, Linux)
 
 Example
 -------
