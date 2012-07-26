@@ -6,30 +6,26 @@
                                                    
 Testrocket is a super simple (as simple as it gets really) testing library for Ruby.
 
-It was initially developed for [this CodeBrawl competition](http://codebrawl.com/articles/contest-rundown-ruby-testing-libraries) and it won! People then asked me to release it 'for real' so here we are.
+It was initially developed for [a CodeBrawl contest](http://codebrawl.com/articles/contest-rundown-ruby-testing-libraries) and it won! People  asked me to release it 'for real' so here we are.
 
 To install:
 
     gem install testrocket
     
 As yet there are no useful bits and pieces for creating test files (look at the example, it's easy!) or Rake tasks. But it's all crazy simple. A few things may be added later on.
-    
+
 Dependencies
 ------------
 
 - Ruby 1.9
-- minitest/spec (part of MRI 1.9 stdlib)
-- Unix/Unix-like/POSIX system
+- minitest (part of MRI 1.9 stdlib)
 
 Example
 -------
 
     require 'testrocket'
     
-    # ===========================================================
-    # EXAMPLE TEST "SUITE" FOR "DIE"
-    #
-    # USAGE
+    # BASIC USAGE
     # +-> { block that should succeed }
     # --> { block that should fail }
     
@@ -60,5 +56,4 @@ Authors
 -------
 
 Initial concept and maintenance by Peter Cooper
-
 Extra concepts and code by Christoph Grabo
