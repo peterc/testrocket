@@ -23,32 +23,36 @@ Dependencies
 Example
 -------
 
-    require 'testrocket'
-    
-    # BASIC USAGE
-    # +-> { block that should succeed }
-    # --> { block that should fail }
-    
-    +-> { Die.new(2) }
-    --> { raise }
-    +-> { 2 + 2 == 4 }
-    
-    # These two tests will deliberately fail
-    +-> { raise }
-    --> { true }
+```ruby
+require 'testrocket'
 
-    # A 'pending' test
-    ~-> { "this is a pending test" }
-    
-    # A description
-    !-> { "use this for descriptive output and to separate your test parts" }
+# BASIC USAGE
+# +-> { block that should succeed }
+# --> { block that should fail }
+
++-> { Die.new(2) }
+--> { raise }
++-> { 2 + 2 == 4 }
+
+# These two tests will deliberately fail
++-> { raise }
+--> { true }
+
+# A 'pending' test
+~-> { "this is a pending test" }
+
+# A description
+!-> { "use this for descriptive output and to separate your test parts" }
+```
     
 Other Features
 --------------
 
 By default, output is written to STDOUT (as well as returned by the test expressions themselves). You can override where test output goes like so:
 
-    TestRocket.out = File.new('/dev/null', 'w')
+```ruby
+TestRocket.out = File.new('/dev/null', 'w')
+```
 
 TestRocket.out also supports Logger instances.
 
