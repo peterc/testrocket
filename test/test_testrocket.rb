@@ -1,4 +1,4 @@
-require 'helper'
+require_relative 'helper'
 
 describe TestRocket do
   it "should find emptiness non-truthful by default" do
