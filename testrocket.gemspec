@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Peter Cooper","Christoph Grabo"]
   s.email       = ["git@peterc.org","chris@dinarrr.com"]
   s.homepage    = "http://github.com/peterc/testrocket"
-  s.summary     = %q{A super lightweight conceptual testing library for Ruby}
-  s.description = %q{A super lightweight conceptual testing library for Ruby}
+  s.summary     = %q{A super lightweight lamdba-based testing library for Ruby}
+  s.description = %q{A super lightweight lamdba-based testing library for Ruby}
 
   s.rubyforge_project = "testrocket"
 
