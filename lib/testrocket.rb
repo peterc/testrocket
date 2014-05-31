@@ -5,8 +5,8 @@ module TestRocket
 
   def +@; _show _test :_pass, :_fail end
   def -@; _show _test :_fail, :_pass end
-  def ~; _show _pend;               end
-  def !; _show _desc;               end
+  def ~; _show _pend end
+  def !; _show _desc end
 
   def _show(r); (TestRocket.out || $>) << r + "\n"; r end
   def _pass; "     OK" end
