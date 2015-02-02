@@ -1,4 +1,4 @@
-0.0.3 - February 2, 2015
+0.1.0 - February 2, 2015
 
 - Switched default output to STDERR instead of STDOUT
 - Moved the methods that do the work into a TestRocket::Live module so...
