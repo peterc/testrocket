@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "testrocket/version"
+require "testrocket"
 
 Gem::Specification.new do |s|
   s.name        = "testrocket"
-  s.version     = Testrocket::VERSION
+  s.version     = TestRocket::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Peter Cooper","Christoph Grabo"]
   s.email       = ["git@peterc.org","chris@dinarrr.com"]

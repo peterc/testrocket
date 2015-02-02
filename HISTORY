@@ -1,7 +1,17 @@
-0.0.1 - August 10, 2011
+0.0.3 - February 2, 2015
 
-- Initial release
+- Switched default output to STDERR instead of STDOUT
+- Moved the methods that do the work into a TestRocket::Live module so...
+- .. a module called TestRocket::Dummy has been added so TestRocket isn't used in production situations
+- Extra tests for showing the location of a failing, passing, or pending test
+- Reversed HISTORY order
+- Merged VERSION constant into main module file
+- Removed the Jenkins CI stuff as I can't remember anything about it
 
 0.0.2 - May 31, 2014
 
 - Finally pushed extra syntax version to rubygems.org ;-)
+
+0.0.1 - August 10, 2011
+
+- Initial release

@@ -1,6 +1,0 @@
-source "http://rubygems.org"
-
-gem "rake" # added for travis-ci.org
-
-# Specify your gem's dependencies in testrocket.gemspec
-gemspec
