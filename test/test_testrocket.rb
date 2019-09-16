@@ -29,21 +29,21 @@ class RefinementTest
       end
 
       it 'should give a pending notice' do
-        (~->{ "a pending test" }).must_match(/PENDING/)
-        (~->{ "a pending test" }).must_match(/a pending test/)
-        (~->{ "a pending test" }).must_match("#{__FILE__}:#{__LINE__}")
+        (~->{ 'a pending test' }).must_match(/PENDING/)
+        (~->{ 'a pending test' }).must_match(/a pending test/)
+        (~->{ 'a pending test' }).must_match("#{__FILE__}:#{__LINE__}")
       end
 
       it 'should fire a description rocket' do
-        (!->{ "a description" }).must_match(/FIRE/)
-        (!->{ "a description" }).must_match(/a description/)
+        (!->{ 'a description' }).must_match(/FIRE/)
+        (!->{ 'a description' }).must_match(/a description/)
       end
 
       it 'would influence Ruby Proc if TestRocket used explitly' do
         (
           ok = ->() { nil }
           !ok
-        ).must_equal("   FIRE ''!")
+        ).must_match(/FIRE/)
       end
     end
   end
@@ -52,7 +52,7 @@ end
 class NoRefinementTest
   def self.test!
     describe 'Without `using TestRocket`' do
-      it "should not influence global Ruby scope and other libs" do
+      it 'should not influence global Ruby scope and other libs' do
         (
           ok = ->() { nil }
           !ok

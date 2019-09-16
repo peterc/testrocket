@@ -27,6 +27,7 @@ Example
 
 ```ruby
 require 'testrocket'
+using TestRocket
 
 # BASIC USAGE
 # +-> { block that should succeed }
@@ -51,6 +52,8 @@ As well as running tests in separate test files in the 'traditional' way, TestRo
 
 ```ruby
 class YourClass
+  using TestRocket
+
   def initialize
   end
 
