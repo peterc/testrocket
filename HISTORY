@@ -1,3 +1,7 @@
+1.0.0 - October 2, 2019
+
+- Breaking change: TestRocker now uses refinements to stop it polluting Object.
+
 0.1.0 - February 2, 2015
 
 - Switched default output to STDERR instead of STDOUT
