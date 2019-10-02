@@ -16,6 +16,8 @@ To install:
 
 As yet there are no useful bits and pieces for creating test files (look at the example, it's easy!) or Rake tasks. But it's all crazy simple. A few things may be added later on.
 
+*Note: Prior to version 1, TestRocket extended built-in classes to work, but has (in 2019) been modernized to use refinements to avoid it clashing with third party libraries in real world scenarios (yes, people use this library in real world code!)*
+
 Dependencies
 ------------
 
@@ -93,3 +95,5 @@ Initial concept and maintenance by Peter Cooper
 Extra concepts and code by Christoph Grabo
 
 Thanks to Gary Bernhardt for often praising and shining attention on TestRocket :-)
+
+Thanks to Serge Bedzhyk for modernizing the library to use refinements.
