@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+require 'colorize'
 ##
 # TestRocket Module to refine lambdas an use them for lightweight tests
 #
@@ -23,10 +23,10 @@ module TestRocket
     else
       def _test(a, b); send((call rescue()) ? a : b) end
       def _show(r); (TestRocket.out || STDERR) << r + "\n"; r end
-      def _pass; '     OK' end
-      def _fail; "   FAIL @ #{source_location * ':'}" end
-      def _pend; "PENDING '#{call}' @ #{source_location * ':'}" end
-      def _desc; "   FIRE '#{call}'!" end
+      def _pass; '     OK'.green end
+      def _fail; "   FAIL @ #{source_location * ':'}".red end
+      def _pend; "PENDING '#{call}' @ #{source_location * ':'}".brown end
+      def _desc; "   FIRE '#{call}'!".blue end
     end
 
     def +@; _show _test :_pass, :_fail end
