@@ -6,7 +6,7 @@
 module TestRocket
   VERSION = '1.0.0'
 
-  extend Module.new { attr_accessor :out }
+  self.class.attr_accessor :out
 
   refine Proc do
     # Include TestRocket methods WITHOUT implementation selected

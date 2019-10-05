@@ -45,6 +45,18 @@ class RefinementTest
           !ok
         ).must_match(/FIRE/)
       end
+
+      it 'should set and get out value' do
+        original = TestRocket.out
+        require 'stringio'
+        io = StringIO.new
+        begin
+          TestRocket.out = io
+          (TestRocket.out).must_be_same_as io
+        ensure
+          TestRocket.out = original
+        end
+      end
     end
   end
 end
