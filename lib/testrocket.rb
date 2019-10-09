@@ -25,7 +25,7 @@ module TestRocket
       def _show(r); (TestRocket.out || STDERR) << r + "\n"; r end
       def _pass; '     OK'.green end
       def _fail; "   FAIL @ #{source_location * ':'}".red end
-      def _pend; "PENDING '#{call}' @ #{source_location * ':'}".brown end
+      def _pend; "PENDING '#{call}' @ #{source_location * ':'}".cyan end
       def _desc; "   FIRE '#{call}'!".blue end
     end
 
