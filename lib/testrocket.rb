@@ -9,9 +9,6 @@ module TestRocket
   extend Module.new { attr_accessor :out }
 
   refine Proc do
-    # Include TestRocket methods WITHOUT implementation selected
-    Proc.send :include, TestRocket
-
     # If we're in a production environment, the tests shall do nothing.
     if ENV['RACK_ENV'] == 'production' ||
        (defined?(Rails) && Rails.env.production?) ||
@@ -22,7 +19,7 @@ module TestRocket
       def _desc; end
     else
       def _test(a, b); send((call rescue()) ? a : b) end
-      def _show(r); (TestRocket.out || STDERR) << r + "\n"; r end
+      def _show(r); (TestRocket.out || STDERR) << r + "\n" end
       def _pass; '     OK' end
       def _fail; "   FAIL @ #{source_location * ':'}" end
       def _pend; "PENDING '#{call}' @ #{source_location * ':'}" end
