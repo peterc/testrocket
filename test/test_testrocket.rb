@@ -6,43 +6,43 @@ class RefinementTest
   def self.test!
     describe TestRocket do
       it 'should find emptiness non-truthful by default' do
-        (+->{}).must_match(/FAIL/)
-        (+->{}).must_match("#{__FILE__}:#{__LINE__}")
+        _(+->{}).must_match(/FAIL/)
+        _(+->{}).must_match("#{__FILE__}:#{__LINE__}")
       end
 
       it 'should pass a simple positive assertion' do
-        (+->{ 2 + 2 == 4 }).must_match(/OK/)
+        _(+->{ 2 + 2 == 4 }).must_match(/OK/)
       end
 
       it 'should pass a simple negative assertion' do
-        (-->{ 2 + 2 == 5 }).must_match(/OK/)
+        _(-->{ 2 + 2 == 5 }).must_match(/OK/)
       end
 
       it 'should fail a simple erroneous assertion' do
-        (+->{ 2 + 2 == 5 }).must_match(/FAIL/)
-        (+->{ 2 + 2 == 5 }).must_match("#{__FILE__}:#{__LINE__}")
+        _(+->{ 2 + 2 == 5 }).must_match(/FAIL/)
+        _(+->{ 2 + 2 == 5 }).must_match("#{__FILE__}:#{__LINE__}")
       end
 
       it 'should fail a simple correct assertion assumed to fail' do
-        (-->{ 2 + 2 == 4 }).must_match(/FAIL/)
-        (-->{ 2 + 2 == 4 }).must_match("#{__FILE__}:#{__LINE__}")
+        _(-->{ 2 + 2 == 4 }).must_match(/FAIL/)
+        _(-->{ 2 + 2 == 4 }).must_match("#{__FILE__}:#{__LINE__}")
       end
 
       it 'should give a pending notice' do
-        (~->{ 'a pending test' }).must_match(/PENDING/)
-        (~->{ 'a pending test' }).must_match(/a pending test/)
-        (~->{ 'a pending test' }).must_match("#{__FILE__}:#{__LINE__}")
+        _(~->{ 'a pending test' }).must_match(/PENDING/)
+        _(~->{ 'a pending test' }).must_match(/a pending test/)
+        _(~->{ 'a pending test' }).must_match("#{__FILE__}:#{__LINE__}")
       end
 
       it 'should fire a description rocket' do
-        (!->{ 'a description' }).must_match(/FIRE/)
-        (!->{ 'a description' }).must_match(/a description/)
+        _(!->{ 'a description' }).must_match(/FIRE/)
+        _(!->{ 'a description' }).must_match(/a description/)
       end
 
       it 'would influence Ruby Proc if TestRocket used explitly' do
         (
           ok = ->() { nil }
-          !ok
+          _(!ok)
         ).must_match(/FIRE/)
       end
     end
@@ -55,7 +55,7 @@ class NoRefinementTest
       it 'should not influence global Ruby scope and other libs' do
         (
           ok = ->() { nil }
-          !ok
+          _(!ok)
         ).must_equal(false)
       end
     end
