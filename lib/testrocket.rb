@@ -4,7 +4,7 @@
 # TestRocket Module to refine lambdas an use them for lightweight tests
 #
 module TestRocket
-  VERSION = '1.0.0'
+  VERSION = '1.1.0'
 
   extend Module.new { attr_accessor :out }
 
