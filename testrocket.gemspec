@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
-$:.push File.expand_path('../lib', __FILE__)
-require 'testrocket'
+require_relative 'lib/testrocket'
 
 Gem::Specification.new do |s|
   s.name        = 'testrocket'
@@ -11,11 +10,11 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://github.com/peterc/testrocket'
   s.summary     = %q{A super lightweight lamdba-based testing library for Ruby}
   s.description = %q{A super lightweight lamdba-based testing library for Ruby}
+  s.license     = 'MIT'
+  s.required_ruby_version = '>= 2.1'
 
-  s.rubyforge_project = 'testrocket'
-
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
+  s.files         = Dir.glob('{lib,test}/**/*') + %w[README.md LICENSE Gemfile testrocket.gemspec]
+  s.test_files    = Dir.glob('test/**/*')
+  s.executables   = Dir.glob('bin/*').map { |f| File.basename(f) }
   s.require_paths = ['lib']
 end
