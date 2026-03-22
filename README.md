@@ -22,7 +22,7 @@ Dependencies
 ------------
 
 - Ruby 2.1 or higher (tested on Ruby 3.4 and 4.0.2)
-- minitest/spec (part of MRI 1.9+ standard library)
+- minitest/spec
 
 Example
 -------
