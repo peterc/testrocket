@@ -4,7 +4,7 @@
     | |_|  __|__ \ |_| | | (_) | (__|   <|  __/ |_
      \__|\___|___/\__|_|  \___/ \___|_|\_\\___|\__|
 
-Testrocket is a super simple (as simple as it gets really) testing library for Ruby 2.0 and higher. It has also been modernized and tested to run on Ruby 3.4. 
+Testrocket is a super simple (as simple as it gets really) testing library for Ruby 2.0 and higher. It has also been modernized and tested to run on Ruby 3.4 and Ruby 4.0.2.
 
 It was initially developed for [a CodeBrawl contest](https://web.archive.org/web/20110725022042/http://codebrawl.com/articles/contest-rundown-ruby-testing-libraries) and it got first place! People asked me to release it 'for real' so here we are.
 
@@ -21,7 +21,7 @@ As yet there are no useful bits and pieces for creating test files (look at the 
 Dependencies
 ------------
 
-- Ruby 2.1 or higher (tested on Ruby 3.4)
+- Ruby 2.1 or higher (tested on Ruby 3.4 and 4.0.2)
 - minitest/spec (part of MRI 1.9+ standard library)
 
 Example

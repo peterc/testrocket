@@ -17,4 +17,7 @@ Gem::Specification.new do |s|
   s.test_files    = Dir.glob('test/**/*')
   s.executables   = Dir.glob('bin/*').map { |f| File.basename(f) }
   s.require_paths = ['lib']
+
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'minitest'
 end
