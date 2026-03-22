@@ -79,7 +79,7 @@ In this way, your class is tested each time you run the app in development or te
 Other Features
 --------------
 
-By default, output is written to STDERR (as well as returned by the test expressions themselves). You can override where test output goes like so:
+By default, output is written to `$stderr` (as well as returned by the test expressions themselves). You can override where test output goes like so:
 
 ```ruby
 TestRocket.out = File.new('/dev/null', 'w')
